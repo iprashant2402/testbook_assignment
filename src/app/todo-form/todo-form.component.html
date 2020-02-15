@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="form-wrapper">
+        <form [formGroup]="taskForm" (ngSubmit)="addTask(taskForm.value)">        
+            <div class="input-wrapper">
+              <input class="mt-input" id="title" type="text" formControlName="title" placeholder="What do you want to do?">
+            </div>
+            <div class="label-wrapper">
+                <label for="timer">Set the timer(in sec) :</label>
+            </div>
+            <div class="input-wrapper">
+                <input class="mt-input" id="title" type="text" formControlName="timer" placeholder="Enter time in seconds.">
+            </div>          
+            <div class="input-wrapper"><button class="btn" type="submit">Add task</button></div>
+      </form>
+    </div>
+</div>

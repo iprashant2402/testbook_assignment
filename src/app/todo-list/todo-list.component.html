@@ -1,0 +1,16 @@
+<div class="todolist-container">
+    <div class="heading-wrapper">
+        <h2 class="mt-h2">Tasks to be completed</h2>
+    </div>
+    <div class="listWrapper">
+        <div *ngFor="let task of currentTodoList">
+            <div class="task" *ngIf="task!=null">
+                <div class="task-title">{{task.title}}</div>
+                <div class="del-btn-wrapper"><button type='button' class="del-btn" (click)="removeTask(task.id)">Done</button></div>
+            </div>
+        </div>
+        <div class="task" *ngIf="currentTodoList.length===0">
+            <div class="task-title">There's nothing left to do. Sit back and Relax, or just add a new task.</div>
+        </div>
+    </div>
+</div>
